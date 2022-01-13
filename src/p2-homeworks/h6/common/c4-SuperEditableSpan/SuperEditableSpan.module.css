@@ -1,0 +1,21 @@
+.mutableSpan {
+    font-size: 18px;
+    color: #005524;
+}
+
+.mutableSpan:hover {
+    background: rgba(0,0,0,0);
+	color: #3a7999;
+	box-shadow: inset 0 0 0 3px #6f90a1;
+}
+
+.textBox {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+img {
+    height: 22px;
+    width: 22px;
+}
