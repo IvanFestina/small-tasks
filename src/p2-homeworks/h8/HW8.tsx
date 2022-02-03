@@ -16,7 +16,7 @@ export type UserType = {
 }
 
 export const initialPeople: UserType[] = [
-    {_id: 0, name: 'Кот', age: 3},
+    {_id: 0, name: 'Кот', age: 13},
     {_id: 1, name: 'Александр', age: 66},
     {_id: 2, name: 'Коля', age: 16},
     {_id: 3, name: 'Виктор', age: 44},
