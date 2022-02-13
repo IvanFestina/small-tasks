@@ -14,6 +14,7 @@ export const PATH = {
 }
 
 function MyRoutes() {
+
     return (
         <div>
             {/*Switch выбирает первый подходящий роут*/}
@@ -32,3 +33,4 @@ function MyRoutes() {
 }
 
 export default MyRoutes
+
