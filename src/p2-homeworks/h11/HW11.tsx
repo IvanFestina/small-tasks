@@ -3,9 +3,11 @@ import SuperRange from './common/c7-SuperRange/SuperRange'
 import SuperDoubleRange from './common/c8-SuperDoubleRange/SuperDoubleRange'
 
 function HW11() {
-    const [value1, setValue1] = useState(0)
-    const [value2, setValue2] = useState(100)
+    const [valueArray, setValueArray] = useState<number[]>([0, 100])
 
+    const callbackSetValueArray = (newNumber: number) => {
+        setValueArray([newNumber, valueArray[1]])
+    }
     return (
         <div>
             <hr/>
@@ -13,18 +15,16 @@ function HW11() {
 
             {/*should work (должно работать)*/}
             <div>
-                <span>{value1}</span>
-                <SuperRange
-                    // сделать так чтоб value1 изменялось
+                <span>{valueArray[0]}</span>
+                <SuperRange firstValue={valueArray[0]}
+                            callbackSetValueArray={callbackSetValueArray}
                 />
             </div>
 
             <div>
-                <span>{value1}</span>
-                <SuperDoubleRange
-                    // сделать так чтоб value1 и value2 изменялось
-                />
-                <span>{value2}</span>
+                <span>{valueArray[0]}</span>
+                <SuperDoubleRange valueArray={valueArray} setValueArray={setValueArray}/>
+                <span>{valueArray[1]}</span>
             </div>
 
             <hr/>
