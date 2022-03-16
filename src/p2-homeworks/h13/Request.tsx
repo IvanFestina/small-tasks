@@ -26,7 +26,6 @@ export const Request = () => {
     const onChangeCheckboxHandler = () => {
         setSuccess(!success)
     }
-    const error = () => console.log('hello@')
 
 
     return <div style={{display: 'flex', flexDirection: 'column', alignItems: 'center'}}>
